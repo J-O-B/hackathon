@@ -1,0 +1,22 @@
+#mapContainer{
+    background:red;
+}
+#map{
+    height:50vh;
+    background-color: green;
+}
+#noLocContainer{
+    height:50vh;
+    background-color: grey;
+    overflow-y: scroll;
+}
+#chat{
+    overflow: hidden;
+}
+.userPic{
+    display: flex;
+    margin:0 auto;
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+}
