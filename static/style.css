@@ -1,9 +1,263 @@
+/************************ --- GLOBAL --- ***************************/
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald');
+
+/* font-size at 62.5% makes 1rem = 10px for mobile sizing */
+html {
+    font-size: 62.5%;
+}
+/* Increase base font size for iPad and up */
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body{
+    font-family: Lato;
+    font-weight: 500;
+    color: #494949;
+    width: 100%;
+    /* Wallpaper source: https://www.publicdomainpictures.net/en/view-image.php?image=112124&picture=shamrock-wallpaper-background */
+    background-image: url('https://res.cloudinary.com/cjcon90/image/upload/v1615047486/they_think_its_all_clover/wallpapertip_shamrock-wallpaper_1951752.png');
+    background-size: 100%;
+    backdrop-filter: opacity(.2);
+}
+/* source for transparent background code: https://css-tricks.com/snippets/css/transparent-background-images/ */
+/* Wallpaper source: https://www.publicdomainpictures.net/en/view-image.php?image=112124&picture=shamrock-wallpaper-background */
+/* body::after {
+    content: '';
+    background-image: url('https://res.cloudinary.com/cjcon90/image/upload/v1615047486/they_think_its_all_clover/wallpapertip_shamrock-wallpaper_1951752.png');
+    background-size: 100vw;
+    opacity: .10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+} */
+
+/************************************************** Typography */
+
+/* Section titles */
+.title {
+    display: inline-block;
+    width: 100%;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem .5rem;
+    color: white;
+    background-color: #219664;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Hashtag with gradient background */
+.hashtag {
+    font-size: 3rem;
+    background: linear-gradient(to right, #219664,#32e095, #ffab5c, #ff8a4c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+
+.tweet-count {
+    font-size: 3.5rem;
+    color: #ff8a4c;
+    font-weight: 700;
+}
+
+.tweet-count-subtitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #219664;
+    font-size: 1.5rem;
+}
+
+.prompt {
+    font-weight: 600;
+    color: #ff8a4c;
+    font-size: 2.5rem;
+}
+
+/************************************************** Layout */
+
+/* Section box */
+.outer-box {
+    margin: 1.5rem auto;
+    border: solid 2px rgba(0, 167, 74, .5);
+    padding: 0;
+    border-radius: 1rem;
+    max-width: 95%;
+    box-shadow: 0 0 20px rgba(0,0,0, .4);
+    background: rgba(255, 255, 255, .85);
+}
+
+@media only screen and (min-width: 768px) {
+    .outer-box {
+        max-width: 650px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .outer-box {
+        max-width: 95%;
+    }
+    .text-box, .tweet-box {
+        max-width: 40vw;
+    }
+}
+
+/* Section box minus heading */
+.inner-box {
+    padding: 1rem;
+}
+.col-md-12 {
+    width: 95%;
+    max-width: 700px;
+}
+
+/************************************************** Header section */
+
+header {
+    height: 10rem;
+} 
+
+#hero-image{
+    background: url("https://res.cloudinary.com/cjcon90/image/upload/v1615037115/they_think_its_all_clover/header.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-animation-name: hero-zoom;
+            animation-name: hero-zoom;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hero-zoom {
+    from{
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+@keyframes hero-zoom {
+    from{
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+
+/************************************************** Content section */
+
+
+/********************** Main Text section */
+
+.text-sub-box {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.tweet-button:link, .tweet-button:visited {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 10rem;
+    padding: .5rem;
+    gap: .5rem;
+    background-color: #219664;
+    border: solid 3px transparent;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: all .2s;
+}
+
+.tweet-button:hover, .tweet-button:focus {
+    background-color: #00c700;
+    transform: translateY(-5%);
+    box-shadow: 2px 2px 10px rgba(0,0,0, .4);
+}
+.tweet-button:active {
+    transform: translateY(2%);
+    background-color: #219664;
+    border: solid 3px #00c700;
+}
+
+.twitter-icon {
+    height: 2rem;
+    fill: white;
+}
+
+
+/********************** Tweet Board section */
+.tweet-board {
+    height:15rem;
+}
+
+
+/********************** Map section */
+#mapContainer{
+    background:red;
+    width: 95vw;
+    overflow: hidden;
+}
+#map{
+    min-height: 25rem;
+    max-width: 99%;
+    overflow: hidden;
+}
+
+/************************************************** Footer section */
+
+footer {
+    background-color: #219664;
+    color: #fafafa;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*----------------- Copyright entry */
+.copyright {
+	margin: auto 8px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.copyright em {
+	margin-right: .5rem;
+}
+
+.details{
+    width: 100%;
+}
+
 body{
     max-width:100vw;
     overflow-x: hidden;
 }
 hr{
-    width:50%;
+    width:100%;
 }
 .helpLink{
     width:100%;
@@ -12,16 +266,7 @@ hr{
 .hidden{
     display:none;
 }
-#mapContainer{
-    background:red;
-    width: 95vw;
-    overflow: hidden;
-}
-#map{
-    height:50vh;
-    max-width: 99%;
-    overflow: hidden;
-}
+
 #noLocContainer{
     height:50vh;
     background-color: grey;
@@ -40,7 +285,7 @@ hr{
 .userPics img{
     height:100px;
     width:100px;
-    margin-top:20%;
+    margin-top:5px;
     margin-bottom: 0;
     border-radius: 50%;
 }
@@ -107,4 +352,5 @@ hr{
     height:auto;
     box-sizing: border-box;
     box-shadow: 5px 5px 15px #000;
+    border-radius: 10%;
 }
