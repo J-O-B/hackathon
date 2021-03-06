@@ -10,7 +10,7 @@ hr{
     margin-left:40%;
 }
 .hidden{
-    visibility: hidden;
+    display:none;
 }
 #mapContainer{
     background:red;
