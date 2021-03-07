@@ -405,7 +405,7 @@ hr{
 	background: -o-linear-gradient(left, gold, darkorange);
 	background: linear-gradient(to right, gold, darkorange);
 	color: white;
-	--width: 50%;
+	--width: 90%;
 	--height: 50px;
 	width: var(--width);
 	height: var(--height);
