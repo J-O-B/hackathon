@@ -52,6 +52,11 @@ TheyThinkItsAllClover is a python flask web-app aiming to bring the world togeth
 
 ## Testing
 
+To test this project, JSHint and W3C Validator were used to check all html, css and javascript.
+Although some errors show on the CSS check, all of these items are related to prefix's for cross browser compatability.
+![test](/static/htmlCheck.jpg)
+
+
 <a name='Deployment'></a>
 
 ## Deployment
@@ -62,4 +67,6 @@ real time, rather than simply scraping any tweet with the correct hashtag.
 To deploy to heroku an app "TheyThinkItsAllClover" was created. From gitpod, a remote connection to that 
 app was created before pushing our completed project to the Heroku Master Branch. Environmental keys and 
 API keys were added directly in the Heroku security tab on the Heroku website.
+
+
 

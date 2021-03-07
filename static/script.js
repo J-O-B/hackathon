@@ -10,13 +10,13 @@ $("#myModal").on('hidden.bs.modal', function (e) {
     $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
 });
 
-var map = L.map('map').setView([53.34, -6.26], 4);
+let map = L.map('map').setView([53.34, -6.26], 4);
 
 L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=ZK2Os6eoqo86I37zYlQO', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var ourIcon = L.icon({
+let ourIcon = L.icon({
     iconUrl: "../static/pin.png",
     iconSize: [30,40],
     iconAnchor: [20,30],
@@ -46,7 +46,6 @@ function marker(){
             }else{
                 // Pass
             }
-            ;
         });
     });
 }
@@ -55,16 +54,16 @@ function marker(){
 $('#tweetBtn').click(function(){
     $('.tweetdata').hide(1000);
     $('.tweetCard').show(2000);
-})
+});
 
 $('#backBtn').click(function(){
     $('.tweetCard').hide(1000);
     $('.tweetdata').show(2000);
-})
+});
 
 $('#expandMap').click(function(){
     $('#map').css("height", "650px");
-})
+});
 $('#smallMap').click(function(){
     $('#map').css("height", "25rem");
-})
+});

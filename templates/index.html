@@ -31,7 +31,7 @@
                         Please Remember To Have Your Location Settings On, So We Can Add You Automatically To The<br>
                         St.Patricks Day Tweet Map!
                     </p>
-                    <iframe height="315" src="https://www.youtube.com/embed/J680_aKF5zc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe height="315" src="https://www.youtube.com/embed/J680_aKF5zc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="row modalButton">
                         <button type="button" class="btn box btn-block" data-dismiss="modal">Fáilte / Enter</button>
                     </div>
@@ -45,7 +45,7 @@
     <header>
         <img src="https://res.cloudinary.com/cjcon90/image/upload/v1615144396/they_think_its_all_clover/shamrock-computer-icons-four-leaf-clover-symbol-clip-art-clover-removebg-preview.png" alt="">
         <div class="header-text">
-            <h1 class="header-text-one">#TheyThinkItsAllClover</h1>
+            <h2 class="header-text-one">#TheyThinkItsAllClover</h2>
             <h2 class="header-text-two">IT IS NOW</h2>
         </div>
     </header>
@@ -55,7 +55,7 @@
         <div class="row">
             <!-- Text box -->
             <div class="col-sm-12 col-lg-6 text-box outer-box">
-                <h1 class="title">Paddy's Day Tweets</h1>
+                <h2 class="title">Paddy's Day Tweets</h2>
                 <div class="inner-box">
                     <h1 class="hashtag">#TheyThinkItsAllClover</h1>
                     <div class="row">
@@ -84,15 +84,15 @@
                                         <div class="modal-body">
                                             <h3>How To Join In:</h3>
                                             <ol>
-                                                <li>Go To <a href="https://twitter.com" target="_blank" class="modalLink">Twitter</a></li>
-                                                <li>Ensure Your Location Settings Are Turned On: <em><a href="https://help.twitter.com/en/safety-and-security/twitter-location-services-for-mobile#:~:text=Go%20to%20your%20device's%20Settings%20feature%20and%20tap%20Apps.,to%20turn%20on%20or%20off." target="_blank" class="modalLink questionLink">How to do this?</a></em></li>
+                                                <li>Go To <a href="https://twitter.com" target="_blank" rel="noopener" class="modalLink">Twitter</a></li>
+                                                <li>Ensure Your Location Settings Are Turned On: <em><a href="https://help.twitter.com/en/safety-and-security/twitter-location-services-for-mobile#:~:text=Go%20to%20your%20device's%20Settings%20feature%20and%20tap%20Apps.,to%20turn%20on%20or%20off." target="_blank" rel="noopener" class="modalLink questionLink">How to do this?</a></em></li>
                                                 <li>Tweet A St.Patricks Day Message Using The Hashtag: <strong>#theyThinkItsAllClover</strong></li>
                                             </ol>
                                         </div>
                                         <div class="modal-footer">
                                             <button class="btn btn-danger btn-lg" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
                                             <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftheythinkitsallclover.herokuapp.com&via=StPaddysDay2021&text=I%27m%20joining%20in%20the%20global%20St.%20Patrick%27s%20Day%20celebrations%20with%20TheyThinkItsAllClover%21%20Why%20not%20join%20in%20the%20craic%2C%20and%20show%20up%20on%20the%20map%2C%20at%3A&hashtags=TheyThinkItsAllClover"
-                                            target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
+                                            target="_blank" rel="noopener" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@
                         <img src="{{tweet.avatar}}" alt="User Picture">
                     </div>
                     <div class="details">
-                        <a href="{{tweet.url}}" target="_blank">{{tweet.username}}</a>
+                        <a href="{{tweet.url}}" target="_blank" rel="noopener">{{tweet.username}}</a>
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
                         <h4>
@@ -176,16 +176,16 @@
         </div> 
         <div class="row creators">
             <div class="col text-center">
-                <a href="https://github.com/cjcon90" target="_blank"><i class="fab fa-github"></i> Ciaran</a> 
+                <a href="https://github.com/cjcon90" target="_blank" rel="noopener"><i class="fab fa-github"></i> Ciaran</a> 
             </div>
             <div class="col text-center">
-                <a href="https://github.com/tubaman48" target="_blank"><i class="fab fa-github"></i> Richard</a>
+                <a href="https://github.com/tubaman48" target="_blank" rel="noopener"><i class="fab fa-github"></i> Richard</a>
             </div>
             <div class="col text-center">
-                <a href="#" target="_blank"><i class="fab fa-github"></i> Ruben</a>
+                <a href="#" target="_blank"><i class="fab fa-github" rel="noopener"></i> Ruben</a>
             </div>
             <div class="col text-center">
-                <a href="https://github.com/J-O-B" target="_blank"><i class="fab fa-github"></i> Jonathan</a>
+                <a href="https://github.com/J-O-B" target="_blank" rel="noopener"><i class="fab fa-github"></i> Jonathan</a>
             </div>
         </div>
     </footer>
