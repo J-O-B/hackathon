@@ -427,6 +427,11 @@ hr{
 	position: relative;
 	overflow: hidden;
 }
+@media only screen and (max-width: 600px) {
+    .box{
+        width: 95vw;
+    }
+}
 
 .box:hover {
 	-webkit-transform: perspective(500px) rotateY(15deg);
