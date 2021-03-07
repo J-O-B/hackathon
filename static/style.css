@@ -367,10 +367,11 @@ hr{
 }
 .modal-dialog{
     margin-top: 10%;
-    max-width:100vw;
     background: red;
+    min-width:100vw;
 }
 .modal-content{
+    height:auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -388,6 +389,7 @@ hr{
     background: -o-linear-gradient(left, #219664,#32e095, #ffab5c, #ff8a4c);
     background: -webkit-gradient(linear, left top, right top, from(#219664),color-stop(#32e095), color-stop(#ffab5c), to(#ff8a4c));
     background: linear-gradient(to right, #219664,#32e095, #ffab5c, #ff8a4c);
+    overflow: hidden;
 }
 .modal-content iframe{
     -webkit-box-sizing: border-box;
@@ -405,7 +407,7 @@ hr{
 	background: -o-linear-gradient(left, gold, darkorange);
 	background: linear-gradient(to right, gold, darkorange);
 	color: white;
-	--width: 300px;
+	--width: 80%;
 	--height: 50px;
 	width: var(--width);
 	height: var(--height);
@@ -429,7 +431,9 @@ hr{
 }
 @media only screen and (max-width: 600px) {
     .box{
-        width: 95vw;
+        font-size: smaller;
+        font-weight: 700;
+        width: 130%;
     }
 }
 
