@@ -278,6 +278,7 @@ hr{
     height:100px;
     width:100px;
     border-radius: 50%;
+    object-fit: cover;
 }
 .userPics img{
     height:100px;
@@ -365,13 +366,28 @@ hr{
             box-shadow: 5px 5px 15px #000;
     border-radius: 10%;
 }
-.modal-dialog{
-    margin-top: 10%;
-    background: red;
-    min-width:100vw;
+
+.myModal {
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
+.modal-dialog{
+    min-width: 95vw;
+    max-height: 90vh;
+    margin: auto;
+}
+.modal-body {
+    padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 700px){
+    .modal-dialog {
+        margin-top: 10%;
+    }
+}
+
 .modal-content{
-    height:auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -438,64 +454,68 @@ hr{
     -webkit-box-shadow: 1px 1px 3px #fff, 1px 1px 4px #000;
             box-shadow: 1px 1px 3px #fff, 1px 1px 4px #000;
 }
+
 .box {
     margin:0 auto;
-	background: -webkit-gradient(linear, left top, right top, from(gold), to(darkorange));
-	background: -o-linear-gradient(left, gold, darkorange);
-	background: linear-gradient(to right, gold, darkorange);
-	color: white;
-	--width: 80%;
-	--height: 50px;
-	width: var(--width);
-	height: var(--height);
-	text-align: center;
-	line-height: var(--height);
-	font-size: calc(var(--height) / 2.5);
-	font-family: sans-serif;
-	letter-spacing: 0.2em;
-	border: 1px solid darkgoldenrod;
-	border-radius: 2em;
-	-webkit-transform: perspective(500px) rotateY(-15deg);
-	        transform: perspective(500px) rotateY(-15deg);
-	text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
-	        box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	position: relative;
-	overflow: hidden;
+    background: -webkit-gradient(linear, left top, right top, from(gold), to(darkorange));
+    background: -o-linear-gradient(left, gold, darkorange);
+    background: linear-gradient(to right, gold, darkorange);
+    color: white;
+    --width: 80%;
+    --height: 50px;
+    width: var(--width);
+    max-width: 400px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    font-size: calc(var(--height) / 2.5);
+    font-weight: 700;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border: 1px solid darkgoldenrod;
+    border-radius: 2em;
 }
-@media only screen and (max-width: 600px) {
-    .box{
-        font-size: smaller;
-        font-weight: 700;
-        width: 130%;
+
+
+@media only screen and (min-width: 992px) {
+    .box {
+
+        -webkit-transform: perspective(500px) rotateY(-15deg);
+                transform: perspective(500px) rotateY(-15deg);
+        text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+                box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        position: relative;
+        overflow: hidden;
     }
-}
+    
+    .box:hover {
+        -webkit-transform: perspective(500px) rotateY(15deg);
+                transform: perspective(500px) rotateY(15deg);
+        text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+                box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .box::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
+        background: -o-linear-gradient(left, transparent, white, transparent);
+        background: linear-gradient(to right, transparent, white, transparent);
+        left: -100%;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+    
+    .box:hover::before {
+        left: 100%;
+    }
 
-.box:hover {
-	-webkit-transform: perspective(500px) rotateY(15deg);
-	        transform: perspective(500px) rotateY(15deg);
-	text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
-	        box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.box::before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
-	background: -o-linear-gradient(left, transparent, white, transparent);
-	background: linear-gradient(to right, transparent, white, transparent);
-	left: -100%;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-}
-
-.box:hover::before {
-	left: 100%;
 }
