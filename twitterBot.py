@@ -35,7 +35,7 @@ class StdOutListener(StreamListener):
                                   '%a %b %d %H:%M:%S %z %Y')
         try:
             coordinates = text["place"]["bounding_box"]["coordinates"]
-            location = coordinates
+            location = coordinates[0][0]
         except:
             location = text["user"]["location"]
         tweet_data = {
