@@ -34,13 +34,10 @@ class StdOutListener(StreamListener):
         time_posted = dt.strptime(text["created_at"],
                                   '%a %b %d %H:%M:%S %z %Y')
         try:
-            if (text["place"]["bounding_box"]["coordinates"]):
-                coordinates = text["place"]["bounding_box"]["coordinates"]
-                location = coordinates[0][0]
-            else:
-                location = text["user"]["location"]
+            coordinates = text["place"]["bounding_box"]["coordinates"]
+            location = coordinates[0][0]
         except:
-            location = "No Location"
+            location = text["user"]["location"]
         tweet_data = {
                 "content": content,
                 "username": username,

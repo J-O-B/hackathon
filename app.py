@@ -4,6 +4,8 @@ from flask import (
 from flask_pymongo import PyMongo
 if os.path.exists("env.py"):
     import env
+    import credentials
+    import twitterBot
 
 app = Flask(__name__)
 
@@ -20,6 +22,12 @@ def home():
     count = mongo.db.tweets.count()
     return render_template("index.html",
                            tweets=tweets, count=count)
+
+
+@app.route("/abc")
+def bot():
+    execfile('twitterBot.py')
+    return "Looking For Tweets"
 
 
 if __name__ == "__main__":
