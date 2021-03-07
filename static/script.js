@@ -17,7 +17,7 @@ L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=ZK2Os6eoqo
 }).addTo(map);
 
 var ourIcon = L.icon({
-    iconUrl: "https://i.imgur.com/CbAdhGo.png",
+    iconUrl: "../static/pin.png",
     iconSize: [30,40],
     iconAnchor: [20,30],
 });
