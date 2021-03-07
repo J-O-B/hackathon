@@ -46,7 +46,7 @@ TheyThinkItsAllClover is a python flask web-app aiming to bring the world togeth
 <a name='Wireframes'></a>
 
 ### Wireframes
-> - [Wireframes](docs/wireframe.pdf): A single page website.
+> - [Wireframes](static/wireframe.pdf): A single page website.
 
 <a name='Testing'></a>
 
