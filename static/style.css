@@ -405,7 +405,7 @@ hr{
 	background: -o-linear-gradient(left, gold, darkorange);
 	background: linear-gradient(to right, gold, darkorange);
 	color: white;
-	--width: 90%;
+	--width: 300px;
 	--height: 50px;
 	width: var(--width);
 	height: var(--height);
@@ -426,11 +426,6 @@ hr{
 	transition: 0.5s;
 	position: relative;
 	overflow: hidden;
-}
-@media only screen and (max-width: 600px) {
-    .box{
-        width: 100%;
-    }
 }
 
 .box:hover {
