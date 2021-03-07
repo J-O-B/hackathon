@@ -31,15 +31,11 @@ body{
 }
 
 #expandMap{
+    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 #smallMap{
-    cursor: zoom-out;
-}
-.zoom-in{
-    cursor: zoom-in;
-}
-.zoom-out{
+    cursor: -webkit-zoom-out;
     cursor: zoom-out;
 }
 
@@ -137,15 +133,28 @@ body{
 
 header {
   height: 10rem;
+  background: -webkit-gradient(linear, left top, right top, from(#219664),color-stop(#ffffff), to(#ff8a4c));
+  background: -o-linear-gradient(left, #219664,#ffffff, #ff8a4c);
   background: linear-gradient(to right, #219664,#ffffff, #ff8a4c);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-text-one {
@@ -283,7 +292,8 @@ hr{
     height:100px;
     width:100px;
     border-radius: 50%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .userPics img{
     height:100px;
@@ -373,6 +383,7 @@ hr{
 }
 
 .myModal {
+    display: -ms-grid;
     display: grid;
     place-items: center;
     height: 100vh;
@@ -408,7 +419,7 @@ hr{
     text-shadow: 1px 1px 1px #fff, 3px 3px 5px #ff8a4c, 5px 5px 10px #219664;
     color:black;
     background: -o-linear-gradient(left, #219664,#32e095, #fff, #ffab5c, #ff8a4c);
-    background: -webkit-gradient(linear, left top, right top, from(#219664),color-stop(#32e095), color-stop(#ffab5c), to(#ff8a4c));
+    background: -webkit-gradient(linear, left top, right top, from(#219664),color-stop(#32e095), color-stop(#fff), color-stop(#ffab5c), to(#ff8a4c));
     background: linear-gradient(to right, #219664,#32e095, #fff, #ffab5c, #ff8a4c);
     overflow: hidden;
 }
@@ -429,10 +440,14 @@ hr{
     -webkit-box-shadow: 2px 2px 5px #fff, 5px 5px 15px #000;
             box-shadow: 2px 2px 5px #fff, 5px 5px 15px #000;
     padding: 5px 10px 5px 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 .modalLink:hover{
-    transform: scale(2,2);
+    -webkit-transform: scale(2,2);
+        -ms-transform: scale(2,2);
+            transform: scale(2,2);
     -webkit-box-shadow: 4px 4px 10px #fff, 9px 9px 15px #000;
             box-shadow: 4px 4px 10px #fff, 9px 9px 15px #000;
 }
@@ -451,11 +466,15 @@ hr{
             box-sizing: border-box;
     -webkit-box-shadow: 2px 2px 5px #fff, 3px 3px 10px #ff8a4c, 5px 5px 15px #000;
             box-shadow: 2px 2px 5px #fff, 3px 3px 10px #ff8a4c, 5px 5px 15px #000;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
 .modal-footer a:hover,
 .modal-footer button:hover{
-    transform: scale(0.9,0.9);
+    -webkit-transform: scale(0.9,0.9);
+        -ms-transform: scale(0.9,0.9);
+            transform: scale(0.9,0.9);
     -webkit-box-shadow: 1px 1px 3px #fff, 1px 1px 4px #000;
             box-shadow: 1px 1px 3px #fff, 1px 1px 4px #000;
 }
@@ -464,8 +483,8 @@ hr{
     margin:0 auto;
     margin-bottom: 50px;
     margin-top: 25px;
-    background: -webkit-gradient(linear, left top, right top, from(gold), to(darkorange));
     background: -o-linear-gradient(left, gold, darkorange);
+    background: -webkit-gradient(linear, left top, right top, from(gold), to(darkorange));
     background: linear-gradient(to right, gold, darkorange);
     color: white;
     --width: 80%;
@@ -512,8 +531,8 @@ hr{
         position: absolute;
         width: 100%;
         height: 100%;
-        background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
         background: -o-linear-gradient(left, transparent, white, transparent);
+        background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
         background: linear-gradient(to right, transparent, white, transparent);
         left: -100%;
         -webkit-transition: 0.5s;
