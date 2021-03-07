@@ -39,7 +39,11 @@ body{
     cursor: -webkit-zoom-out;
     cursor: zoom-out;
 }
-
+.pageWrap{
+    height:auto;
+    max-width: 100%;
+    overflow: hidden;
+}
 /************************************************** Typography */
 
 /* Section titles */
@@ -70,6 +74,11 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
+}
+@media only screen and (max-width: 1200px) {
+    .hashtag {
+        font-size: 2.2rem;
+    }
 }
 
 
@@ -170,6 +179,15 @@ header {
   letter-spacing: 8px;
 }
 
+@media only screen and (max-width: 430px){
+    .header-text-one {
+        font-size: 2rem;
+    }
+    .header-text-two {
+        font-size: 2.5rem;
+    }
+}
+
 /************************************************** Content section */
 
 
@@ -247,14 +265,14 @@ header {
 /************************************************** Footer section */
 
 footer {
-    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
     background-color: #219664;
     color: #fafafa;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    position: relative;
 }
-
 /*----------------- Copyright entry */
 .copyright {
 	margin: auto 8px;
