@@ -57,29 +57,21 @@ L.marker([37.57, 126.97],{icon:ourIcon}).addTo(map)
 L.marker([3.07, 101.51],{icon:ourIcon}).addTo(map)
     .bindPopup('<img src="" alt="userPhoto" class="userPic"><br>Selangor');*/
 
-var count = $("#coordinates").children().length;
+var count = $('.coordinates').length
 
 var i;
 for (i = 0; i < count; i++) {
     $(this).css("background", "red");
 }
-$('#coordinates').each(function(){
-    marker();
-});
-function marker(){
-    $('#coordinates').each(function(){
+$('.coordinates').each(function(){
     let lat = $(this).find('.lat').val();
     let long = $(this).find('.long').val();
     let pic = $(this).find('.pic').val();
     let message = $(this).find('.tweet').val();
     let name = $(this).find('.name').val();
-
-    console.log(typeof lat)
-    console.log(typeof long)
     L.marker([lat, long],{icon:ourIcon}).addTo(map)
     .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
-    });
-}
+});
 
 
 $('#tweetBtn').click(function(){

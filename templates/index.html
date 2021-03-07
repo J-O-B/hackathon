@@ -79,16 +79,12 @@
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
                         <h4>{{tweet.content}}</h4>
-                        <div id="coordinates">
-                            {% for i in range(count|int) %}
-                            <div>
+                        <div class="coordinates">
                                 <input class="lat hidden" type="number" value="{{long}}">
                                 <input class="long hidden" type="number" value="{{lat}}">
                                 <input class="pic hidden" type="text" value="{{tweet.avatar}}">
                                 <input class="tweet hidden" type="text" value="{{tweet.content}}">
                                 <input class="name hidden" type="text" value="{{tweet.username}}">
-                            </div>
-                            {%endfor%}
                         </div>
                         <hr>
                         <p>
