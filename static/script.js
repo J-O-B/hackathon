@@ -63,7 +63,7 @@ $('#backBtn').click(function(){
 })
 
 $('#expandMap').click(function(){
-    $('#map').css("height", "900px");
+    $('#map').css("height", "650px");
 })
 $('#smallMap').click(function(){
     $('#map').css("height", "25rem");
