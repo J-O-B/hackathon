@@ -41,9 +41,13 @@
 
 <!--END MODAL-->
 
-    <header class="row" id="header">
-        <div class="col-sm-12" id="hero-image"></div>
-    </header>
+    <header>
+    <img src="https://res.cloudinary.com/cjcon90/image/upload/v1615144396/they_think_its_all_clover/shamrock-computer-icons-four-leaf-clover-symbol-clip-art-clover-removebg-preview.png" alt="">
+    <div class="header-text">
+      <h1 class="header-text-one">#TheyThinkItsAllClover</h1>
+      <h2 class="header-text-two">IT IS NOW</h2>
+    </div>
+  </header>
     <!-- Main Body -->
     <main class="container-fluid">
         <!-- Text Box and Tweet Board -->
@@ -62,7 +66,7 @@
                             <h3 class="prompt">Join in!</h3>
                             <!--Twitter Button-->
                             <a href="#" class="tweet-button" data-toggle="modal" data-target="#exampleModal">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="twitter-icon">
+                                <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="twitter-icon">
                                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                                 </svg>Tweet
                             </a>
@@ -86,7 +90,8 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button class="btn btn-danger btn-lg" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-                                            <a href="https://twitter.com" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
+                                            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftheythinkitsallclover.herokuapp.com&via=StPaddysDay2021&text=I%27m%20joining%20in%20the%20global%20St.%20Patrick%27s%20Day%20celebrations%20with%20TheyThinkItsAllClover%21%20Why%20not%20join%20in%20the%20craic%2C%20and%20show%20up%20on%20the%20map%2C%20at%3A&hashtags=TheyThinkItsAllClover"
+                                            target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +102,9 @@
             </div>
             <!-- Tweet Box -->
             <div class="col-sm-12 col-lg-6 tweet-box outer-box">
-                <h2 class="title">Tweet Board</h2>
+                <h2 class="title">
+                    Tweet Board
+                </h2>
                 <div class="tweet-board overflow-auto">
                     {% for tweet in tweets %}
                 <div class="userCard col-sm-12">
@@ -108,7 +115,9 @@
                         <h6><a href="{{tweet.url}}" target="_blank">{{tweet.username}}</a></h6>
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
-                        <h4>{{tweet.content}}</h4>
+                        <h4>
+                            {{tweet.content}}
+                        </h4>
                         <div id="coordinates">
                             {% for i in range(50) %}
                             <div class="coordinates">

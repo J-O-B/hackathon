@@ -11,7 +11,6 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
@@ -22,12 +21,6 @@ def home():
     count = mongo.db.tweets.count()
     return render_template("index.html",
                            tweets=tweets, count=count)
-
-
-@app.route("/abc")
-def bot():
-    execfile('twitterBot.py')
-    return "Looking For Tweets"
 
 
 if __name__ == "__main__":
