@@ -262,7 +262,26 @@ footer {
 .copyright em {
 	margin-right: .5rem;
 }
+.creators{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.creators a{
+    text-decoration: none;
+    font-size: large;
+    color:white;
+}
+.creators i{
+    font-size: larger;
+    transition: all 1s ease-in-out;
+}
+.creators a:hover i{
+    transform: rotateX(380deg);
+}
 
+/*----------- Extra CSS Styling ---- */
 .details{
     width: 100%;
 }
