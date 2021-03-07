@@ -18,7 +18,7 @@ L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=ZK2Os6eoqo
 
 var ourIcon = L.icon({
     iconUrl: "https://i.imgur.com/CbAdhGo.png",
-    iconSize: [35,45],
+    iconSize: [30,40],
     iconAnchor: [20,30],
 });
 
@@ -26,37 +26,8 @@ var ourIcon = L.icon({
 L.marker([53.349804, -6.260310],{icon:ourIcon}).addTo(map)
     .bindPopup('<img src="https://i.imgur.com/8ICyCUc.jpg" alt="userPhoto" class="userPic"><br>Welcome To They Think Its All Clover!<br>Scroll Out To View St.Patricks Tweets From<br>Around The World')
     .openPopup();
-    /*
-//London
-let londonlat = 51.50
-let londonlong = 0.13
-L.marker([londonlat, londonlong],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Patrick%27s_Day_-_Trafalgar_Square_March_2006.jpg/220px-St_Patrick%27s_Day_-_Trafalgar_Square_March_2006.jpg" alt="userPhoto" class="userPic"><br>Trafalgar Square');
-//Floriana Malta
-L.marker([35.89, 14.50],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://malta.intercontinental.com/wp-content/uploads/2018/03/St-Patricks-Day-Celebrations-In-Valletta.jpg" alt="userPhoto" class="userPic"><br>Floriana Malta');
-//Moscow
-L.marker([55.75, 37.62],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/St_Patrick%27s_Day_2012_in_Moscow.jpg/220px-St_Patrick%27s_Day_2012_in_Moscow.jpg" alt="userPhoto" class="userPic"><br>Moscow');
-//Sarajevo
-L.marker([43.85, 18.41],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="" alt="userPhoto" class="userPic"><br>Sarajevo');
-//Scotland
-L.marker([55.862, -4.251],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Stpatricksdayfestivalcbridge.JPG/220px-Stpatricksdayfestivalcbridge.JPG" alt="userPhoto" class="userPic"><br>Scotland');
-//Lithuania
-L.marker([54.68, 25.28],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="" alt="userPhoto" class="userPic"><br>Lithuania');
-//Tokyo
-L.marker([35.68, 139.76],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Saint_Patricks_Day_in_Motomachi_Yokohama.jpg/220px-Saint_Patricks_Day_in_Motomachi_Yokohama.jpg" alt="userPhoto" class="userPic"><br>Tokyo');
-//Cheonggyecheon
-L.marker([37.57, 126.97],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="" alt="userPhoto" class="userPic"><br>Cheonggyecheon');
-//Selangor
-L.marker([3.07, 101.51],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="" alt="userPhoto" class="userPic"><br>Selangor');*/
 
+<<<<<<< HEAD
 var count = $('.coordinates').length
 
 var i;
@@ -72,6 +43,30 @@ $('.coordinates').each(function(){
     L.marker([lat, long],{icon:ourIcon}).addTo(map)
     .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
 });
+=======
+$('#coordinates').each(function(){
+    marker();
+});
+function marker(){
+    $('#coordinates').each(function(){
+        $('.coordinates').each(function(){
+            let lat = $(this).find('.lat').val();
+            let long = $(this).find('.long').val();
+            let pic = $(this).find('.pic').val();
+            let message = $(this).find('.tweet').val();
+            let name = $(this).find('.name').val();
+
+            if ((lat.charAt(1) == "0") || (lat.charAt(1) == "1") || (lat.charAt(1) == "2") || (lat.charAt(1) == "3") || (lat.charAt(1) == "4") || (lat.charAt(1) == "5") || (lat.charAt(1) == "6") || (lat.charAt(1) == "7") || (lat.charAt(1) == "8")  || (lat.charAt(1) == "9")){
+                L.marker([lat, long],{icon:ourIcon}).addTo(map)
+                .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
+            }else{
+                // Pass
+            }
+            ;
+        });
+    });
+}
+>>>>>>> a5060d9dc45aa38b4a7603f4b67ad8d804290988
 
 
 $('#tweetBtn').click(function(){
