@@ -38,10 +38,11 @@ function marker(){
             let pic = $(this).find('.pic').val();
             let message = $(this).find('.tweet').val();
             let name = $(this).find('.name').val();
+            let link = $(this).find('.link').val();
 
             if ((lat.charAt(1) == "0") || (lat.charAt(1) == "1") || (lat.charAt(1) == "2") || (lat.charAt(1) == "3") || (lat.charAt(1) == "4") || (lat.charAt(1) == "5") || (lat.charAt(1) == "6") || (lat.charAt(1) == "7") || (lat.charAt(1) == "8")  || (lat.charAt(1) == "9")){
                 L.marker([lat, long],{icon:ourIcon}).addTo(map)
-                .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
+                .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong><a href="${link}" target="_blank">${name}</a></strong><br><em>${message}</em>`);
             }else{
                 // Pass
             }
@@ -59,4 +60,11 @@ $('#tweetBtn').click(function(){
 $('#backBtn').click(function(){
     $('.tweetCard').hide(1000);
     $('.tweetdata').show(2000);
+})
+
+$('#expandMap').click(function(){
+    $('#map').css("height", "900px");
+})
+$('#smallMap').click(function(){
+    $('#map').css("height", "25rem");
 })

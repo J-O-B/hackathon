@@ -42,12 +42,12 @@
 <!--END MODAL-->
 
     <header>
-    <img src="https://res.cloudinary.com/cjcon90/image/upload/v1615144396/they_think_its_all_clover/shamrock-computer-icons-four-leaf-clover-symbol-clip-art-clover-removebg-preview.png" alt="">
-    <div class="header-text">
-      <h1 class="header-text-one">#TheyThinkItsAllClover</h1>
-      <h2 class="header-text-two">IT IS NOW</h2>
-    </div>
-  </header>
+        <img src="https://res.cloudinary.com/cjcon90/image/upload/v1615144396/they_think_its_all_clover/shamrock-computer-icons-four-leaf-clover-symbol-clip-art-clover-removebg-preview.png" alt="">
+        <div class="header-text">
+            <h1 class="header-text-one">#TheyThinkItsAllClover</h1>
+            <h2 class="header-text-two">IT IS NOW</h2>
+        </div>
+    </header>
     <!-- Main Body -->
     <main class="container-fluid">
         <!-- Text Box and Tweet Board -->
@@ -112,7 +112,7 @@
                         <img src="{{tweet.avatar}}" alt="User Picture">
                     </div>
                     <div class="details">
-                        <h6><a href="{{tweet.url}}" target="_blank">{{tweet.username}}</a></h6>
+                        <a href="{{tweet.url}}" target="_blank">{{tweet.username}}</a>
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
                         <h4>
@@ -126,6 +126,7 @@
                                 <input class="pic hidden" type="text" value="{{tweet.avatar}}">
                                 <input class="tweet hidden" type="text" value="{{tweet.content}}">
                                 <input class="name hidden" type="text" value="{{tweet.username}}">
+                                <input class="link hidden" type="text" value="{{tweet.url}}">
                             </div>
                             {%endfor%}
                         </div>
@@ -142,10 +143,26 @@
         <!-- Map Box -->
         <div class="row">
             <div class="col-sm-12 map-box outer-box">
-                <h2 class="title">Tweet Map</h2>
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="col col-md-6">
+                                Tweet Map
+                            </h2>
+                        </div>
+                        <div class="col">
+                            <h2 class="col controls float-right">
+                                Map Controls:
+                                <button type="button" id="expandMap" class="btn btn-info zoom-in">Large Map</button>
+                                <button type="button" id="smallMap" class="btn btn-info zoom-out">Small Map</button>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                
                 <div id="map">
     
-            </div>
+                </div>
             </div>
         </div>
     </main>

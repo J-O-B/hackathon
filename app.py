@@ -4,8 +4,6 @@ from flask import (
 from flask_pymongo import PyMongo
 if os.path.exists("env.py"):
     import env
-    import credentials
-    import twitterBot
 
 app = Flask(__name__)
 

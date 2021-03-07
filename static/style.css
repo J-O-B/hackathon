@@ -30,10 +30,24 @@ body{
             backdrop-filter: opacity(.2);
 }
 
+#expandMap{
+    cursor: zoom-in;
+}
+#smallMap{
+    cursor: zoom-out;
+}
+.zoom-in{
+    cursor: zoom-in;
+}
+.zoom-out{
+    cursor: zoom-out;
+}
+
 /************************************************** Typography */
 
 /* Section titles */
 .title {
+    position: relative;
     display: inline-block;
     width: 100%;
     font-size: 2.5rem;
@@ -43,6 +57,11 @@ body{
     color: white;
     background-color: #219664;
     border-radius: 10px 10px 0 0;
+}
+.controls{
+    font-size: medium;
+    position: absolute;
+    right:20px;
 }
 
 /* Hashtag with gradient background */
@@ -443,6 +462,8 @@ hr{
 
 .box {
     margin:0 auto;
+    margin-bottom: 50px;
+    margin-top: 25px;
     background: -webkit-gradient(linear, left top, right top, from(gold), to(darkorange));
     background: -o-linear-gradient(left, gold, darkorange);
     background: linear-gradient(to right, gold, darkorange);
