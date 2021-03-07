@@ -109,13 +109,7 @@
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
                         <h4>{{tweet.content}}</h4>
-<<<<<<< HEAD
                         <div class="coordinates">
-=======
-                        <div id="coordinates">
-                            {% for i in range(50) %}
-                            <div class="coordinates">
->>>>>>> a5060d9dc45aa38b4a7603f4b67ad8d804290988
                                 <input class="lat hidden" type="number" value="{{long}}">
                                 <input class="long hidden" type="number" value="{{lat}}">
                                 <input class="pic hidden" type="text" value="{{tweet.avatar}}">
