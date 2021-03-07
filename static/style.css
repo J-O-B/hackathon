@@ -29,20 +29,6 @@ body{
     -webkit-backdrop-filter: opacity(.2);
             backdrop-filter: opacity(.2);
 }
-/* source for transparent background code: https://css-tricks.com/snippets/css/transparent-background-images/ */
-/* Wallpaper source: https://www.publicdomainpictures.net/en/view-image.php?image=112124&picture=shamrock-wallpaper-background */
-/* body::after {
-    content: '';
-    background-image: url('https://res.cloudinary.com/cjcon90/image/upload/v1615047486/they_think_its_all_clover/wallpapertip_shamrock-wallpaper_1951752.png');
-    background-size: 100vw;
-    opacity: .10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
-} */
 
 /************************************************** Typography */
 
@@ -266,11 +252,6 @@ footer {
 .details{
     width: 100%;
 }
-
-body{
-    max-width:100vw;
-    overflow-x: hidden;
-}
 hr{
     width:100%;
 }
@@ -386,7 +367,7 @@ hr{
 }
 .modal-dialog{
     margin-top: 10%;
-    min-width:50vw;
+    max-width:100vw;
     background: red;
 }
 .modal-content{
@@ -415,6 +396,7 @@ hr{
             box-shadow: 2px 2px 5px #fff, 3px 3px 10px #ff8a4c, 5px 5px 15px #000;
     border-radius: 5%;
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .box {
