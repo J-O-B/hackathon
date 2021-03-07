@@ -2,7 +2,6 @@ import os
 from flask import (
     Flask, render_template)
 from flask_pymongo import PyMongo
-from twitterBot import *
 if os.path.exists("env.py"):
     import env
 
@@ -19,12 +18,11 @@ mongo = PyMongo(app)
 def home():
     tweets = mongo.db.tweets.find().sort('time_posted', -1)
     count = mongo.db.tweets.count()
-    stream = StdOutListener()
     return render_template("index.html",
-                           tweets=tweets, count=count, stream=stream)
+                           tweets=tweets, count=count)
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
