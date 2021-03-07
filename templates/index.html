@@ -86,7 +86,8 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button class="btn btn-danger btn-lg" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-                                            <a href="https://twitter.com" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
+                                            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftheythinkitsallclover.herokuapp.com&via=StPaddysDay2021&text=I%27m%20joining%20in%20the%20global%20St.%20Patrick%27s%20Day%20celebrations%20with%20TheyThinkItsAllClover%21%20Why%20not%20join%20in%20the%20craic%2C%20and%20show%20up%20on%20the%20map%2C%20at%3A&hashtags=TheyThinkItsAllClover"
+                                            target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
                                         </div>
                                     </div>
                                 </div>
@@ -109,16 +110,12 @@
                         {% set lat = tweet.location[0] %}
                         {% set long = tweet.location[1] %}
                         <h4>{{tweet.content}}</h4>
-                        <div id="coordinates">
-                            {% for i in range(50) %}
-                            <div class="coordinates">
+                        <div class="coordinates">
                                 <input class="lat hidden" type="number" value="{{long}}">
                                 <input class="long hidden" type="number" value="{{lat}}">
                                 <input class="pic hidden" type="text" value="{{tweet.avatar}}">
                                 <input class="tweet hidden" type="text" value="{{tweet.content}}">
                                 <input class="name hidden" type="text" value="{{tweet.username}}">
-                            </div>
-                            {%endfor%}
                         </div>
                         <hr>
                         <p>
