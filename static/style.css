@@ -121,7 +121,7 @@ header {
 } 
 
 #hero-image{
-    background: url("/header.png");
+    background: url("../static/header.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
