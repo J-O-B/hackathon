@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
 <link rel="stylesheet" href="../static/style.css">
 <title>They Think It's All Clover</title>
+<link rel="icon" 
+      type="image/png" 
+      href="../static/shamrock-computer-icons-four-leaf-clover-symbol-clip-art-clover-removebg-preview.png">
 </head>
 <body>
 <!--Modal On Load-->
@@ -57,10 +60,37 @@
                         </div>
                         <div class="col-6 text-sub-box">
                             <h3 class="prompt">Join in!</h3>
-                            <a href="https://twitter.com" target="_blank" class="tweet-button"><?xml version="1.0" encoding="UTF-8"?>
+                            <!--Twitter Button-->
+                            <a href="#" class="tweet-button" data-toggle="modal" data-target="#exampleModal">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="twitter-icon">
                                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                                </svg>Tweet</a>
+                                </svg>Tweet
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" id="exampleModalLabel">Join In For The Craic!</h2>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3>How To Join In:</h3>
+                                            <ol>
+                                                <li>Go To <a href="https://twitter.com" target="_blank" class="modalLink">Twitter</a></li>
+                                                <li>Ensure Your Location Settings Are Turned On: <em><a href="https://help.twitter.com/en/safety-and-security/twitter-location-services-for-mobile#:~:text=Go%20to%20your%20device's%20Settings%20feature%20and%20tap%20Apps.,to%20turn%20on%20or%20off." target="_blank" class="modalLink questionLink">How to do this?</a></em></li>
+                                                <li>Tweet A St.Patricks Day Message Using The Hashtag: <strong>#theyThinkItsAllClover</strong></li>
+                                            </ol>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger btn-lg" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
+                                            <a href="https://twitter.com" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-twitter"></i> Tweet</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,8 +110,8 @@
                         {% set long = tweet.location[1] %}
                         <h4>{{tweet.content}}</h4>
                         <div id="coordinates">
-                            {% for i in range(count|int) %}
-                            <div>
+                            {% for i in range(50) %}
+                            <div class="coordinates">
                                 <input class="lat hidden" type="number" value="{{long}}">
                                 <input class="long hidden" type="number" value="{{lat}}">
                                 <input class="pic hidden" type="text" value="{{tweet.avatar}}">
