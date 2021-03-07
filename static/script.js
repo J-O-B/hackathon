@@ -39,10 +39,13 @@ function marker(){
             let message = $(this).find('.tweet').val();
             let name = $(this).find('.name').val();
 
-            console.log(typeof lat)
-            console.log(typeof long)
-            L.marker([lat, long],{icon:ourIcon}).addTo(map)
-            .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
+            if ((lat.charAt(1) == "0") || (lat.charAt(1) == "1") || (lat.charAt(1) == "2") || (lat.charAt(1) == "3") || (lat.charAt(1) == "4") || (lat.charAt(1) == "5") || (lat.charAt(1) == "6") || (lat.charAt(1) == "7") || (lat.charAt(1) == "8")  || (lat.charAt(1) == "9")){
+                L.marker([lat, long],{icon:ourIcon}).addTo(map)
+                .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
+            }else{
+                // Pass
+            }
+            ;
         });
     });
 }
