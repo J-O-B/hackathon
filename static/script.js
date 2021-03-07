@@ -3,7 +3,13 @@ $( document ).ready(function() {
     $('#coordinates').hide();
     $('.lat').hide();
     $('.long').hide();
+    $("#myModal").modal('show');
 });
+// Stop Modal Video If Still Playing On Close
+$("#myModal").on('hidden.bs.modal', function (e) {
+    $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+});
+
 var map = L.map('map').setView([53.34, -6.26], 4);
 
 L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=ZK2Os6eoqo86I37zYlQO', {

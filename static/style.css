@@ -391,3 +391,27 @@ hr{
             box-shadow: 5px 5px 15px #000;
     border-radius: 10%;
 }
+.modal-dialog{
+    margin-top: 10%;
+    min-width:50vw;
+    background: red;
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #fff, 3px 3px 5px #ff8a4c, 5px 5px 10px #219664;
+    color:black;
+    background: -webkit-gradient(linear, left top, right top, from(#219664),color-stop(#32e095), color-stop(#ffab5c), to(#ff8a4c));
+    background: -o-linear-gradient(left, #219664,#32e095, #ffab5c, #ff8a4c);
+    background: linear-gradient(to right, #219664,#32e095, #ffab5c, #ff8a4c);
+}
+.modal-content iframe{
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #fff, 3px 3px 10px #ff8a4c, 5px 5px 15px #000;
+    border-radius: 5%;
+    margin-bottom: 25px;
+}
