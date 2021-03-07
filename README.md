@@ -1,4 +1,4 @@
-# TheyThinkItsAllClover
+# TheyThinkItsAllClover - [Visit Live Site](https://TheyThinkItsAllClover.Herokuapp.com)
 
 ![app logo](/static/Untitled.jpg)
 
@@ -17,7 +17,7 @@ TheyThinkItsAllClover is a python flask web-app aiming to bring the world togeth
 
 <a name='Stories'></a>
 
-![Image](docs/site-mock-up-rough-2021-03-06.png)
+![Image](/static/phones.jpg)
 
 ## User Stories
 
@@ -55,3 +55,11 @@ TheyThinkItsAllClover is a python flask web-app aiming to bring the world togeth
 <a name='Deployment'></a>
 
 ## Deployment
+
+This app is deployed on Heroku. The bot to scrape tweets has to be continuously run as it finds tweets in 
+real time, rather than simply scraping any tweet with the correct hashtag.
+
+To deploy to heroku an app "TheyThinkItsAllClover" was created. From gitpod, a remote connection to that 
+app was created before pushing our completed project to the Heroku Master Branch. Environmental keys and 
+API keys were added directly in the Heroku security tab on the Heroku website.
+
