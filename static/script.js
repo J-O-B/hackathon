@@ -24,31 +24,24 @@ var ourIcon = L.icon({
 
 //Dublin
 L.marker([53.349804, -6.260310],{icon:ourIcon}).addTo(map)
-    .bindPopup('<img src="https://i.imgur.com/8ICyCUc.jpg" alt="userPhoto" class="userPic"><br>Welcome To They Think Its All Clover!<br>Scroll Out To View St.Patricks Tweets From<br>Around The World')
+    .bindPopup('<img src="https://res.cloudinary.com/cjcon90/image/upload/v1615137776/they_think_its_all_clover/8ICyCUc.jpg" alt="userPhoto" class="userPic"><br>Welcome To They Think Its All Clover!<br>Scroll Out To View St.Patricks Tweets From<br>Around The World')
     .openPopup();
 
-$('#coordinates').each(function(){
-    marker();
-});
-function marker(){
-    $('#coordinates').each(function(){
-        $('.coordinates').each(function(){
-            let lat = $(this).find('.lat').val();
-            let long = $(this).find('.long').val();
-            let pic = $(this).find('.pic').val();
-            let message = $(this).find('.tweet').val();
-            let name = $(this).find('.name').val();
+var count = $('.coordinates').length
 
-            if ((lat.charAt(1) == "0") || (lat.charAt(1) == "1") || (lat.charAt(1) == "2") || (lat.charAt(1) == "3") || (lat.charAt(1) == "4") || (lat.charAt(1) == "5") || (lat.charAt(1) == "6") || (lat.charAt(1) == "7") || (lat.charAt(1) == "8")  || (lat.charAt(1) == "9")){
-                L.marker([lat, long],{icon:ourIcon}).addTo(map)
-                .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
-            }else{
-                // Pass
-            }
-            ;
-        });
-    });
+var i;
+for (i = 0; i < count; i++) {
+    $(this).css("background", "red");
 }
+$('.coordinates').each(function(){
+    let lat = $(this).find('.lat').val();
+    let long = $(this).find('.long').val();
+    let pic = $(this).find('.pic').val();
+    let message = $(this).find('.tweet').val();
+    let name = $(this).find('.name').val();
+    L.marker([lat, long],{icon:ourIcon}).addTo(map)
+    .bindPopup(`<img src="${pic}" alt="userPhoto" class="userPic"><br><strong>${name}</strong><br><em>${message}</em>`);
+});
 
 
 $('#tweetBtn').click(function(){
