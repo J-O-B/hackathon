@@ -587,23 +587,40 @@ hr{
     max-width: 100%;
 }
 .errorpage{
+    width: 99vw;
     text-align: center;
     background: #000;
     color:green;
     padding-bottom: 100px;
+    overflow: hidden;
 }
 .errorpage img{
-    height: auto;
-    max-width: 100vw;
+    height: 400px;
+    max-width: 100%;
     border-radius: 10%;
+    overflow: hidden;
 }
 .errorimage{
+    width: 99vw;
     background: #000;
     display:flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .errorimage img{
-    max-width:100vw;
+    height: 400px;
+    max-width: 100%;
     border-radius: 10%;
+    overflow: hidden;
+}
+@media only screen and (max-width: 900px) {
+    .errorimage img{
+        max-width: 90vw;
+        height:auto;
+    }
+    .errorpage img{
+        height: auto;
+        max-width: 90vw;
+    }
 }
