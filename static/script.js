@@ -50,17 +50,6 @@ function marker(){
     });
 }
 
-
-$('#tweetBtn').click(function(){
-    $('.tweetdata').hide(1000);
-    $('.tweetCard').show(2000);
-});
-
-$('#backBtn').click(function(){
-    $('.tweetCard').hide(1000);
-    $('.tweetdata').show(2000);
-});
-
 $('#expandMap').click(function(){
     $('#map').css("height", "650px");
 });
