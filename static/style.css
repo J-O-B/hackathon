@@ -422,11 +422,13 @@ hr{
     overflow-x: hidden;
 }
 
-.myModal {
+#myModal {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 80vh;
+    margin-top:10vh;
+    padding-right: 0;
 }
 .modal-dialog{
     min-width: 95vw;
@@ -435,6 +437,9 @@ hr{
 }
 .modal-body {
     padding-bottom: 20px;
+}
+.moday-body ol{
+    margin-left:15px;
 }
 
 @media only screen and (min-width: 700px){
