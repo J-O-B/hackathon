@@ -16,7 +16,8 @@
 
 TheyThinkItsAllClover is a full stack web app aimed at bringing people together. Normally St.Patricks day is a social day with large crowds, great craic and brings people 
 from all over the world together. Our app won't replace the crowds and the craic, but we have tried to provide a platform for people to come together, regardless of where 
-they are in the world and share in the festivities. 
+they are in the world and share in the festivities. To join in the craic, simply Tweet using #theyThinkItsAllClover or #StPatricksDay, remember to click the location pin if you 
+are on a mobile device to get added to our Paddys Day Tweet Map!
 
 A color scheme to match the theme of the app was chosen as the colours of the Irish flag:
 > Green: #169b62

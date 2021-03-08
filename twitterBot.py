@@ -35,8 +35,10 @@ class StdOutListener(StreamListener):
         try:
             coordinates = text["place"]["bounding_box"]["coordinates"]
             location = coordinates[0][0]
+
         except:
             location = text["user"]["location"]
+
         tweet_data = {
                 "content": content,
                 "username": username,
@@ -56,4 +58,4 @@ if __name__ == "__main__":
     listen = StdOutListener()
     stream = Stream(auth, listen)
     # Filter the stream to tweets containing #theyThinkItsAllClover:
-    stream.filter(track=['#theyThinkItsAllClover'])
+    stream.filter(track=['#theyThinkItsAllClover', '#stPatricksDay'])
