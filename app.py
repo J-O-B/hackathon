@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    tweets = mongo.db.tweets.find().sort('time_posted', -1)
+    tweets = mongo.db.tweets.find().sort('time_posted', -1).limit(50)
     count = mongo.db.tweets.count()
     return render_template("index.html",
                            tweets=tweets, count=count)
