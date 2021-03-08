@@ -588,7 +588,22 @@ hr{
 }
 .errorpage{
     text-align: center;
-    background-color: red;
+    background: #000;
     color:green;
-    margin-top: 10vh;
+    padding-bottom: 100px;
+}
+.errorpage img{
+    height: auto;
+    max-width: 100vw;
+    border-radius: 10%;
+}
+.errorimage{
+    background: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.errorimage img{
+    max-width:100vw;
+    border-radius: 10%;
 }
