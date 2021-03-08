@@ -27,11 +27,8 @@ L.marker([53.349804, -6.260310],{icon:ourIcon}).addTo(map)
     .bindPopup('<img src="https://res.cloudinary.com/cjcon90/image/upload/v1615137776/they_think_its_all_clover/8ICyCUc.jpg" alt="userPhoto" class="userPic"><br>Welcome To They Think Its All Clover!<br>Scroll Out To View St.Patricks Tweets From<br>Around The World')    
     .openPopup();
 
-$('#coordinates').each(function(){
-    marker();
-});
+    
 function marker(){
-    $('#coordinates').each(function(){
         $('.coordinates').each(function(){
             let lat = $(this).find('.lat').val();
             let long = $(this).find('.long').val();
@@ -47,9 +44,8 @@ function marker(){
                 // Pass
             }
         });
-    });
 }
-
+marker();
 $('#expandMap').click(function(){
     $('#map').css("height", "650px");
 });
