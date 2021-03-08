@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 # Override the Std Class
 # (https://www.kite.com/python/docs/examples.streaming.StdOutListener)
 class StdOutListener(StreamListener):
-    # https://www.kite.com/python/docs/tweepy.streaming.StreamListener.on_data
+    # Tweepy code taken from Tweepy Documentation: https://docs.tweepy.org/en/latest/
     def on_data(self, data):
         text = json.loads(data)
         content = text["text"]
@@ -39,8 +39,15 @@ class StdOutListener(StreamListener):
         except:
             location = text["user"]["location"]
 
+        # Filter Out Retweets:
         if content.startswith("RT @"):
             print("Retweet Skipped")
+
+        # Filter Out 'Location' None:
+        elif not location:
+            print("No Location")
+
+        # Push To Mongo, Only if we have info we want
         else:
             tweet_data = {
                     "content": content,
@@ -57,7 +64,7 @@ class StdOutListener(StreamListener):
 if __name__ == "__main__":
     auth = OAuthHandler(API_KEY, API_SECRET_KEY)
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-    # Listen for a stream
+    # Listen for a stream - Code via Tweepy Documentation
     listen = StdOutListener()
     stream = Stream(auth, listen)
     # Filter the stream to tweets containing #theyThinkItsAllClover:
