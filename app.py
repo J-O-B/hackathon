@@ -22,7 +22,7 @@ def not_found(e):
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    tweets = mongo.db.tweets.find().sort('time_posted', -1).limit(100)
+    tweets = mongo.db.tweets.find().sort('time_posted', -1)
     count = mongo.db.tweets.count()
     return render_template("index.html",
                            tweets=tweets, count=count)

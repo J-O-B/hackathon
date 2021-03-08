@@ -121,7 +121,6 @@
                             {{tweet.content}}
                         </h4>
                         <div id="coordinates">
-                            {% for i in range(50) %}
                             <div class="coordinates">
                                 <input class="lat hidden" type="number" value="{{long}}">
                                 <input class="long hidden" type="number" value="{{lat}}">
@@ -130,7 +129,6 @@
                                 <input class="name hidden" type="text" value="{{tweet.username}}">
                                 <input class="link hidden" type="text" value="{{tweet.url}}">
                             </div>
-                            {%endfor%}
                         </div>
                         <hr>
                         <p class="timeLoc">
