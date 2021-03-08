@@ -14,7 +14,16 @@
 
 ## Overview
 
-TheyThinkItsAllClover is a python flask web-app aiming to bring the world together on St Patrick's Day 2021 by scraping Happy Paddy's Day wishes from all over the world on Twitter and showing on a live map how, even though we are apart this year, we are all celebrating together!
+TheyThinkItsAllClover is a full stack web app aimed at bringing people together. Normally St.Patricks day is a social day with large crowds, great craic and brings people 
+from all over the world together. Our app won't replace the crowds and the craic, but we have tried to provide a platform for people to come together, regardless of where 
+they are in the world and share in the festivities. 
+
+A color scheme to match the theme of the app was chosen as the colours of the Irish flag:
+> Green: #169b62
+> White: #ffffff
+> Orange: #ff883e
+
+Please find below a more indepth look at this app and some app mockups at the bottom of this page. Happy St.Patricks day from team #theyThinkItsAllClover
 
 <a name='Stories'></a>
 
