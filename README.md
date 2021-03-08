@@ -110,15 +110,22 @@ our Leaflet JS based javascript in conjunction with jQuery loops through all of 
 ## Bugs
 
 1. Locations render to preset default location (mid atlantic equator)
-    Fix: Split the location field (from MongoDB) into 2 seperate fields, and feed both Latitude and Longitude in seperately.
-        (Code: L.marker([lat, long])
+
+>    Fix: Split the location field (from MongoDB) into 2 seperate fields, and feed both Latitude and Longitude in seperately.
+>        (Code: L.marker([lat, long])
+
 2. Only Code Was Looping Through Data & Only Posting Latest Tweet On Map, Instead Of Multiple Pins.
-    Fix: Create a parent div with an ID, then each div created in FOR loop has same class and is child of the ID div. Now we can specify the block to find, the child div with its class name, and all the children of that div.
-        (Code: jQuery .each() & .children())
+
+>    Fix: Create a parent div with an ID, then each div created in FOR loop has same class and is child of the ID div. Now we can specify the block to find, the child div with its class name, and all the children of that div.
+>        (Code: jQuery .each() & .children())
+
 3. Responsive Text
-    Fix: More media queries!
+
+>    Fix: More media queries!
+
 4. Bot Crash On Location Attempt. Some Tweets Contain City Name, Others A Country Name, Some Have Nothing, & Some Have Coordinates
-    Fix: A "Try" / "Except" was added to prioritize what we wanted, so if coordinates are available, we scrape that data, if no coordinates then we will take city or country name, and if nothing exists then "No Location" is returned.
+
+>    Fix: A "Try" / "Except" was added to prioritize what we wanted, so if coordinates are available, we scrape that data, if no coordinates then we will take city or country name, and if nothing exists then "No Location" is returned.
 
 
 # Enjoy The App!
