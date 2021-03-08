@@ -39,16 +39,19 @@ class StdOutListener(StreamListener):
         except:
             location = text["user"]["location"]
 
-        tweet_data = {
-                "content": content,
-                "username": username,
-                "avatar": avatar,
-                "url": url,
-                "location": location,
-                "time_posted": time_posted
-            }
-        print(tweet_data)
-        mongo.db.tweets.insert_one(tweet_data)
+        if content.startswith("RT @"):
+            print("Retweet Skipped")
+        else:
+            tweet_data = {
+                    "content": content,
+                    "username": username,
+                    "avatar": avatar,
+                    "url": url,
+                    "location": location,
+                    "time_posted": time_posted
+                }
+            print(tweet_data)
+            mongo.db.tweets.insert_one(tweet_data)
 
 
 if __name__ == "__main__":

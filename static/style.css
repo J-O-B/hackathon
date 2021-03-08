@@ -578,5 +578,7 @@ hr{
     .box:hover::before {
         left: 100%;
     }
-
+}
+.timeLoc{
+    max-width: 100%;
 }
