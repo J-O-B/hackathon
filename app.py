@@ -13,6 +13,13 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
+@app.errorhandler(404)
+# inbuilt function which takes error as parameter
+def not_found(e):
+    # error page:
+    return render_template("404.html")
+
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     tweets = mongo.db.tweets.find().sort('time_posted', -1)
