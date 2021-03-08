@@ -309,6 +309,7 @@ footer {
     width: 100%;
 }
 .details h4{
+    max-width:100%;
     margin-left: 10px;
 }
 hr{
@@ -601,18 +602,16 @@ hr{
     overflow: hidden;
 }
 .errorimage{
-    width: 99vw;
+    width: 100%;
     background: #000;
     display:flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 .errorimage img{
     height: 400px;
-    max-width: 100%;
+    width: 100%;
     border-radius: 10%;
-    overflow: hidden;
 }
 @media only screen and (max-width: 900px) {
     .errorimage img{
@@ -623,4 +622,10 @@ hr{
         height: auto;
         max-width: 90vw;
     }
+}
+.containerpage{
+    margin:0;
+    padding:10px;
+    width:100vw;
+    overflow: hidden;
 }
